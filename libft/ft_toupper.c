@@ -6,7 +6,7 @@
 /*   By: emillier <emillier@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:40:19 by emillier          #+#    #+#             */
-/*   Updated: 2022/10/31 18:56:59 by emillier         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:54:34 by emillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
 		return (c);

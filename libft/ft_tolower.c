@@ -6,7 +6,7 @@
 /*   By: emillier <emillier@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:57:29 by emillier          #+#    #+#             */
-/*   Updated: 2022/10/31 18:57:18 by emillier         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:54:11 by emillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if(c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);

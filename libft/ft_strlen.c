@@ -6,7 +6,7 @@
 /*   By: emillier <emillier@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:24:57 by emillier          #+#    #+#             */
-/*   Updated: 2022/10/31 18:53:21 by emillier         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:45:19 by emillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int i;
-	i = 0;
+	int	i;
 
-	while(s[i] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
 		i++;
 	}

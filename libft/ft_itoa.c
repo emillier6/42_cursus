@@ -6,7 +6,7 @@
 /*   By: emillier <emillier@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 19:04:21 by emillier          #+#    #+#             */
-/*   Updated: 2022/10/31 19:08:26 by emillier         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:06:40 by emillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_itoa_nsize(long number)
 	return (size);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	long	number;
 	char	*array;
