@@ -1,6 +1,4 @@
-#Para la creainón de variables es con = y para hacer una regla es :
 NAME    =       libft.a
-#Funciones obligatorias
 SRCS    =       ft_isalnum.c\
                                 ft_isalpha.c\
                                 ft_isascii.c\
@@ -47,27 +45,24 @@ BONUS = ft_lstnew.c\
 CC      =       gcc
 RM      =       rm -rf
 FLAGS   =       -Wall -Wextra -Werror
-#Crea y mantiene archivos de biblioteca .o = objeto .d = dipendecia
 LIBC    =       ar -rcs
 OBJT    =       $(SRCS:.c=.o)
 DEPT = $(SRCS:.c=.d)
 OBJTS = $(BONUS:.c=.o)
-DEPTS = $(SRCS:.c=.d)
-all:    $(NAME)
-#Saber donde estan los archivos de las dependencias
+DEPTS = $(BONUS:.c=.d)
+all:    $(NAME) 
 -include $(DEPT)
 -include $(DEPTS)
-#Para compilar las funciones *.c
-%.o:%.c #libft.h
+%.o:%.c
 	$(CC) -MMD $(FLAGS) -c $< -o $@
 $(NAME):        ${OBJT}
 	$(LIBC) $(NAME) $(OBJT)
 bonus:  ${OBJT} ${OBJTS}
 	$(LIBC) $(NAME) $(OBJT) $(OBJTS)
-#Comandos para eliminar los archivos generados
+	@touch $@
 fclean: clean
 	$(RM) $(NAME)
 clean:
-	$(RM) $(OBJT) $(OBJTS) $(DEPT) $(DEPTS)
+	$(RM) $(OBJT) $(OBJTS) $(DEPT) $(DEPTS) bonus
 re: fclean all
-.PHONY: clean fclean re bonus
+.PHONY: clean fclean re

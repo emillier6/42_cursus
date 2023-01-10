@@ -6,7 +6,7 @@
 /*   By: emillier <emillier@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:53:46 by emillier          #+#    #+#             */
-/*   Updated: 2022/10/31 18:58:04 by emillier         ###   ########.fr       */
+/*   Updated: 2023/01/10 16:01:46 by emillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,21 @@
 char *ft_strrchr(const char *s, int c)
 {
 	int	i;
+	char *str;
+	char h;
 
 	i = ft_strlen(s);
-	while(i >= 0)
+	str = (char *)s;
+	h = c;
+	while (i >= 0)
 	{
-		if(c % 256 >= 1)
-			c -= (256 * (c / 256));
-		if(s[i] == c)
-			return ((char*) &s[i]);
+		if(str == 0)
+			return (NULL);
+		if(str == NULL)
+			return(str);
+		if(str[i] == h)
+			return(str + i);
 		i--;
 	}
-	return (0);
+	return (NULL);
 }
