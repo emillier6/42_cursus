@@ -6,7 +6,7 @@
 /*   By: emillier <emillier@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:50:52 by emillier          #+#    #+#             */
-/*   Updated: 2023/01/10 17:43:55 by emillier         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:57:27 by emillier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	char	*dest;
 	char	*source;
 	size_t	dst_length;
-	size_t	remain;
+	size_t	util;
 
 	dest = dst;
 	source = (char *)src;
@@ -25,15 +25,15 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	while (remain-- != 0 && *dest != '\0')
 		dest++;
 	dst_length = dest - dst;
-	remain = dstsize - dst_length;
-	if (remain == 0)
+	util = dstsize - dst_length;
+	if (util == 0)
 		return (dst_length + ft_strlen(source));
 	while (*source != '\0')
 	{
-		if (remain > 1)
+		if (util > 1)
 		{
 			*dest++ = *source;
-			remain--;
+			util--;
 		}
 		source++;
 	}
